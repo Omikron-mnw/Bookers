@@ -1,6 +1,6 @@
 <%= form_with model:@book, local:true do |f| %>
   <h2>Editing Book</h2>
-  <form class="edit_book" id = "edit_book" action = "/books" accept-charset = "UTF-8" method = "post" >
+  <!--<form class="edit_book" id = "edit_book" action = "/books" accept-charset = "UTF-8" method = "post" >-->
     <!--<input name = "utf-8" type = "hidden" value = "✔︎">-->
     <!--<input type = "hidden" name = "authenticity_taken" value = "">-->
     <h4>Title</h4>
@@ -11,6 +11,6 @@
 
     <%= f.submit 'Update Book' %>
 
-  </form>
+  <!--</form>-->
 
 <% end %>

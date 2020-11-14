@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!--<!DOCTYPE html>-->
+<!--<html lang="ja">-->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d626e15075.js" crossorigin="anonymous"></script>
-     CSSファイルの読み込み 
-    <link rel="stylesheet" href="style.css" />
+    <!--<meta charset="UTF-8" />-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <!--<script src="https://kit.fontawesome.com/d626e15075.js" crossorigin="anonymous"></script>-->
+    <!-- CSSファイルの読み込み -->
+    <!--<link rel="stylesheet" href="style.css" />-->
     <title>WebCampBackendNew</title>
   </head>
 
@@ -29,14 +29,14 @@
             <td><%= book.body %></td>
             <td><%= link_to "show", show_book_path(@book) %></td>
             <td><%= link_to "edit", edit_book_path(@book) %></td>
-            <td><%= link_to "destroy", book_path(@book), method :delete %></td>
+            <td><%= link_to "destroy", book_path(@book), method: :delete %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
     <h2>New book</h2>
     <%= form_with model: @book, local:true do |f| %>
-   
+
       <h4>Title</h4>
       <%= f.text_field :title %>
 
@@ -49,4 +49,4 @@
 
   </body>
 
-</html>
+<!--</html>-->

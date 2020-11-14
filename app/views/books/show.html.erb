@@ -1,6 +1,6 @@
 <body>
   <div>Title:<%= @book.title %></div>
   <div>Boddy:<%= @book.body %></div>
-  <a href = "" >Edit</a>
+  <%= link_to "Edit", edit_book_path(@book) %>
   <a href = "https://99e379a1b70746039b66de386941ad3a.vfs.cloud9.us-east-1.amazonaws.com/books" >Back</a>
 </body>
