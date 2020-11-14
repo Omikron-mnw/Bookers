@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(books_params)
+    book = Book.new(book_params)
     book.save
 
     # if @book.save
@@ -21,7 +21,7 @@ class BooksController < ApplicationController
     #   render :action => "new"
     # end
 
-    redirect_to books_path(book.id)
+    redirect_to book_path(book)
   end
 
   # def new
@@ -33,19 +33,19 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book = Book.find(params)
-    blog.update(book_params)
-    redirect_to books_path
+    book = Book.find(params[:id])
+    book.update(book_params)
+    redirect_to book_path(book)
   end
 
   def destroy
-    @book = Book.find(params[:id])
+    book = Book.find(params[:id])
     book.destroy
     redirect_to books_path
   end
 
   private
-  def books_params
+  def book_params
     # require(:book).
     params.permit(:title, :body)
   end
