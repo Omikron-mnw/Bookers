@@ -23,7 +23,7 @@
       </thead>
       <tbody>
         <!--↓@は必要？-->
-        <%= @books.each do |book| %>
+        <% @books.each do |book| %>
           <tr>
             <td><%= book.title %></td>
             <td><%= book.body %></td>
